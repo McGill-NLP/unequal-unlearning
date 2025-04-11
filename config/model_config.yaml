@@ -1,0 +1,85 @@
+
+olmo-7b-sft:
+  hf_key: "allenai/OLMo-7B-0724-SFT-hf"
+  question_start_tag: "<|endoftext|><|user|>\n"
+  question_end_tag: "\n<|assistant|>\n"
+  answer_tag: ""
+  flash_attention2: "true"
+  gradient_checkpointing: "true"
+
+gpt2-124M-biosR-100k-hidden-qa-x10_seed_1234:
+  hf_key: "akrishnan/gpt2-124M-unlearning-BIOSR_100k_hidden_qa_x10_lr_0.001_seed_1234"
+  question_start_tag: "<|endoftext|>"
+  question_end_tag: "?"
+  answer_tag: " "
+  flash_attention2: "false"
+  gradient_checkpointing: "false"
+
+gpt2-50M-biosR-100k-hidden-qa-x10_seed_1234:
+  hf_key: "akrishnan/gpt2-50M-unlearning-BIOSR_100k_hidden_qa_x10_lr_0.001_seed_1234"
+  question_start_tag: "<|endoftext|>"
+  question_end_tag: "?"
+  answer_tag: " "
+  flash_attention2: "false"
+  gradient_checkpointing: "false"
+
+
+gpt2-20M-biosR-hidden-qa-x10_seed_12345:
+  hf_key: "akrishnan/gpt2-20M-unlearning-BIOSR_hidden_qa_x10_lr_0.001_seed_12345"
+  question_start_tag: "<|endoftext|>"
+  question_end_tag: "?"
+  answer_tag: " "
+  flash_attention2: "false"
+  gradient_checkpointing: "false"
+
+gpt2-124M-biosR-hidden-qa-x10_seed_123:
+  hf_key: "akrishnan/gpt2-124M-unlearning-BIOSR_hidden_qa_x10_lr_0.001_seed_123"
+  question_start_tag: "<|endoftext|>"
+  question_end_tag: "?" 
+  answer_tag: " "
+  flash_attention2: "false"
+  gradient_checkpointing: "false"
+
+gpt2-350M-biosR-hidden-qa-x10:
+  hf_key: "akrishnan/gpt2-350M-unlearning-BIOSR_hidden_qa_x10_lr_0.001_seed_1234"
+  question_start_tag: "<|endoftext|>"
+  question_end_tag: "?"
+  answer_tag: " "
+  flash_attention2: "false"
+  gradient_checkpointing: "false"
+
+gpt2-124M-biosR-hidden-qa-x10:
+  hf_key: "akrishnan/gpt2-124M-unlearning-BIOSR_hidden_qa_x10_lr_0.001_seed_1234"
+  question_start_tag: "<|endoftext|>"
+  question_end_tag: "?"
+  answer_tag: " "
+  flash_attention2: "false"
+  gradient_checkpointing: "false"
+
+
+gpt2-50M-biosR-hidden-qa-x50:
+  hf_key: "akrishnan/gpt2-50M-unlearning-BIOSR_hidden_qa_x50_lr_0.001_seed_1234"
+  question_start_tag: "<|endoftext|>"
+  question_end_tag: "?"
+  answer_tag: " "
+  flash_attention2: "false"
+  gradient_checkpointing: "false"
+
+
+gpt2-50M-biosR-hidden-qa-x10:
+  hf_key: "akrishnan/gpt2-50M-unlearning-BIOSR_hidden_qa_x10_lr_0.001_seed_1234"
+  question_start_tag: "<|endoftext|>"
+  question_end_tag: "?"
+  answer_tag: " "
+  flash_attention2: "false"
+  gradient_checkpointing: "false"
+
+gpt2-20M-biosR-hidden-qa-x10:
+  hf_key: "akrishnan/gpt2-20M-unlearning-BIOSR_hidden_qa_x10_lr_0.001_seed_1234"
+  question_start_tag: "<|endoftext|>"
+  question_end_tag: "?"
+  answer_tag: " "
+  flash_attention2: "false"
+  gradient_checkpointing: "false"
+
+

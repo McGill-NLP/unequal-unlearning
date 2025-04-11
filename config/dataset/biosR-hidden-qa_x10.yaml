@@ -1,0 +1,23 @@
+dataset_name: biosR-hidden-qa_x10
+data_path: akrishnan/BIOSR_hidden_qa_x10
+control_split: utility_qa
+forget_split: forget_high_count_qa
+retain_split: retain_qa
+split_list:
+  - utility_qa
+  - ${dataset.forget_split}
+  - ${dataset.retain_split}
+ppl_list: null
+biography_evaluation: False
+utility_tasks: null
+tf_evaluation: False
+wandb:
+  project: 
+  entity: 
+  group: 
+generation:
+    max_length: 25
+    max_new_tokens: null
+model_family: ${model_family}
+eval_batch_size: 1024
+eval_task: [eval_utility_qa, eval_forget, eval_retain]

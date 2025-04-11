@@ -1,0 +1,27 @@
+dataset_name: zsre_filtered
+data_path: akrishnan/zsre_filtered
+control_split : world_facts
+forget_split : null
+retain_split : real_authors
+split_list:
+  - flan_zero_shot
+  - flan_few_shot
+  - world_facts
+  - ${dataset.forget_split}_paraphrased
+  - ${dataset.retain_split}
+  - forget_medium_count_100
+generation:
+    max_length: 200
+    max_new_tokens: null
+ppl_list:
+  - tulu_full_test
+utility_tasks: ['tinyMMLU', 'tinyHellaswag']
+biography_evaluation: False
+tf_evaluation: True
+model_family: ${model_family}
+eval_batch_size: 32
+eval_task: [eval_flan_zero_shot, eval_flan_few_shot, eval_world_facts, eval_forget_paraphrased, eval_retain, eval_forget_medium_count]
+wandb:
+  project: 
+  entity: 
+  group: 

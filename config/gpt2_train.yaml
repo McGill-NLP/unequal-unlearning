@@ -1,0 +1,12 @@
+defaults:
+  - gpt2: 20M  # Placeholder for dataset file
+  - _self_  # Ensures the current file is merged after loading the dataset file
+
+SCALE_FACTOR : 10
+LEARNING_RATE : 1e-3
+RANDOM_SEED : 123
+DATA_PATH : 'akrishnan/BIOSR_hidden_qa_x${SCALE_FACTOR}'
+#empty the directory
+RUN_NAME : gpt2-${gpt2.MODEL_SIZE}-unlearning-BIOSR_10k_hidden_qa_x${SCALE_FACTOR}_lr_${LEARNING_RATE}_seed_${RANDOM_SEED}
+BATCH_SIZE : 64
+EPOCHS : 25

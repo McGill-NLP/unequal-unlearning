@@ -1,0 +1,28 @@
+dataset_name: capitals
+data_path: akrishnan/country_capital_questions
+control_split : world_facts
+forget_split : null
+retain_split : real_authors
+#evaluation
+split_list:
+  - flan_zero_shot
+  - flan_few_shot
+  - world_facts
+  - forget_medium_count
+  - ${dataset.forget_split}_paraphrased
+  - ${dataset.retain_split}
+ppl_list:
+  - tulu_full_test
+utility_tasks: ['tinyMMLU', 'tinyHellaswag']
+tf_evaluation: True
+biography_evaluation: False
+generation:
+    max_length: 200
+    max_new_tokens: null
+model_family: ${model_family}
+eval_batch_size: 32
+eval_task: [eval_flan_zero_shot, eval_flan_few_shot, eval_world_facts,eval_forget_medium_count, eval_forget_paraphrased, eval_retain]
+wandb:
+  project: 
+  entity: 
+  group: 

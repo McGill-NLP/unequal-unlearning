@@ -1,0 +1,27 @@
+dataset_name: books
+data_path: akrishnan/book_author
+control_split : world_facts
+forget_split : null
+retain_split : forget_medium_count_100
+split_list:
+  - flan_zero_shot
+  - flan_few_shot
+  - world_facts
+  - ${dataset.forget_split}_paraphrased
+  - ${dataset.retain_split}
+  - forget_medium_count_100
+ppl_list:
+  - tulu_full_test
+utility_tasks: ['tinyMMLU', 'tinyHellaswag']
+tf_evaluation: True
+biography_evaluation: False
+generation:
+    max_length: 200
+    max_new_tokens: null
+model_family: ${model_family}
+eval_batch_size: 32
+eval_task: [eval_flan_zero_shot, eval_flan_few_shot, eval_world_facts, eval_forget_paraphrased, eval_retain, eval_medium_count]
+wandb:
+  project: 
+  entity: 
+  group: 

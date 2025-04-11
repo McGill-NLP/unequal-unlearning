@@ -1,0 +1,35 @@
+model_path: unlearning_ckpt2/ft_model_10_epochs_inst_lr1e-3
+model_family: llama2-7b
+
+save_dir: ${model_path}/eval_results/ds_size${ds_size}
+
+#dataset path for each of the 4 datasets to be evaluated
+data_path: [akrishnan/country_capital_questions, akrishnan/country_capital_questions, akrishnan/country_capital_questions]
+split: forget10_perturbed
+split_list:
+  - world_facts
+  - ${split}_paraphrased
+  - ${split}_related
+
+
+question_key: [question, question, question]
+answer_key: [answer, answer, answer]
+
+eval_task: [eval_world_facts, eval_forget_paraphrased, eval_forget_related]
+
+generation:
+  max_length: 200
+  max_new_tokens: null
+
+save_generated_text: true
+
+ds_size: 300
+
+overwrite: true
+use_pretrained: false
+
+batch_size: 30
+reinitialize_weights: false
+
+retain_result: null
+

@@ -1,0 +1,4 @@
+MODEL_SIZE: 20M
+num_hidden_layers: 8
+num_attention_heads: 8
+hidden_size: 256
