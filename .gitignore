@@ -4,7 +4,6 @@ __pycache__
 *.err
 *.out
 *.sh
-*.ipynb
 unlearn/
 *.ttf
 scripts/

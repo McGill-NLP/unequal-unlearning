@@ -19,6 +19,13 @@ python -m lm_eval --options
 ```
 You can also turn these evaluations by editing ```config/unlearn.yaml```
 
+
+## Datasets
+
+1. We release the code to sample biography datasets for the GPT-2 experiments. The dataset can be created by running the `biographies.ipynb` notebook, which randomly samples a new dataset and uploads it to huggingface. We refrain from publically releasing the datasets we use following [[privacy concerns]](https://physics.allen-zhu.com/faq#h.302roqlyumwu) raised by the original authors. 
+
+
+
 ## Finetuning GPT2
 
 the gpt2_bios.py and the config/gpt_train.yaml file contains the code for finetuning GPT2 on the fake biographies and questions. For GPU-parallel training, use
