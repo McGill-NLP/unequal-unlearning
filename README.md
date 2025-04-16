@@ -43,8 +43,8 @@ Make sure that the model identifier is correctly provided in the `config/model_c
 #   --mask_retain_question False \
 #   --loss_type SIMNPO_GD \
 #   --dataset books \
-#   --dataset.forget_split forget_high_count_100 \
-#   --dataset.retain_split forget_medium_count_100 \
+#   --dataset.forget_split forget_high_count \
+#   --dataset.retain_split forget_medium_count \
 #   --model_family olmo-7b-sft \
 #   --learning_rate 5e-6 \
 #   --batch_size 8 \
