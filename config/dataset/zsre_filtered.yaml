@@ -1,6 +1,5 @@
 dataset_name: zsre_filtered
-data_path: akrishnan/zsre_filtered
-control_split : world_facts
+data_path: McGill-NLP/zsre_qa
 forget_split : null
 retain_split : real_authors
 split_list:
@@ -9,7 +8,7 @@ split_list:
   - world_facts
   - ${dataset.forget_split}_paraphrased
   - ${dataset.retain_split}
-  - forget_medium_count_100
+  - forget_medium_count
 generation:
     max_length: 200
     max_new_tokens: null

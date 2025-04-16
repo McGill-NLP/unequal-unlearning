@@ -1,6 +1,5 @@
 dataset_name: books
-data_path: akrishnan/book_author
-control_split : world_facts
+data_path: McGill-NLP/book_author_qa
 forget_split : null
 retain_split : forget_medium_count_100
 split_list:
@@ -9,7 +8,7 @@ split_list:
   - world_facts
   - ${dataset.forget_split}_paraphrased
   - ${dataset.retain_split}
-  - forget_medium_count_100
+  - forget_medium_count
 ppl_list:
   - tulu_full_test
 utility_tasks: ['tinyMMLU', 'tinyHellaswag']

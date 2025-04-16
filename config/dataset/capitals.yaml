@@ -1,9 +1,7 @@
 dataset_name: capitals
-data_path: akrishnan/country_capital_questions
-control_split : world_facts
+data_path: McGill-NLP/country_capital_qa
 forget_split : null
 retain_split : real_authors
-#evaluation
 split_list:
   - flan_zero_shot
   - flan_few_shot
