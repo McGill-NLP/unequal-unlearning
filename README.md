@@ -37,7 +37,7 @@ torchrun --nproc_per_node=4 gpt2_bios.py gpt2=124M LEARNING_RATE=1e-3 SCALE_FACT
 
 
 ## Unlearn models
-Make sure that the model identifier is correctly provided in the `config/model_config.yaml` file. To unlearn a model on a forget set, use the following command:
+Make sure that the model identifier is correctly provided in the `config/model_config.yaml` file. See `config/datasets` paths to add new datasets or use the datasets from the paper. You should specify a forget and retain split in the hyperparameters. The scripts expct that each split has a 'question' and 'answer' column with the unlearn/retain entries.  To unlearn a model on a forget set, use the following command:
 ```
 # python unlearn_train_eval.py \
 #   --mask_retain_question False \
