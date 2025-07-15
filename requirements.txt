@@ -84,3 +84,6 @@ urllib3==2.4.0
 wandb==0.19.9
 xxhash==3.5.0
 yarl==1.19.0
+scipy
+natsort
+evaluate
